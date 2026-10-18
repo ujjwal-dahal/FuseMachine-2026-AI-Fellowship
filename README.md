@@ -114,7 +114,7 @@ Follow the instructions inside each week's folder (a README or notebook, where a
 
 **Ujjwal Dahal**
 Email: ujjwaldahal20@gmail.com
-GitHub: [@your-username](https://github.com/ujjwal-dahal)
+GitHub: [@ujjwal-dahal](https://github.com/ujjwal-dahal)
 
 ---
 
