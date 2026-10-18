@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+#Project Ignore
+
+Week_5/telco_churn_pipeline_v1.joblib
+Week_6/telco_byes_lr_v1.pkl
+Week_8/sp500_sarima_v1.pkl

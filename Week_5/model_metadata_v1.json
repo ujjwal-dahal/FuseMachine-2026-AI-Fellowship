@@ -1,0 +1,43 @@
+{
+    "project_name": "Telco Customer Churn Prediction",
+    "version": "v1",
+    "training_date": "2026-05-30",
+    "best_model": "XGBoost (Tuned with GridSearchCV)",
+    "model_performance": {
+        "Random Forest": {
+            "accuracy": 0.7707594038325053,
+            "precision": 0.571830985915493,
+            "recall": 0.5427807486631016,
+            "f1": 0.5569272976680384,
+            "roc_auc": 0.8148544266191327
+        },
+        "XGBoost (Tuned)": {
+            "accuracy": 0.7721788502484032,
+            "precision": 0.556989247311828,
+            "recall": 0.6925133689839572,
+            "f1": 0.6174016686531585,
+            "roc_auc": 0.8431088377379937
+        }
+    },
+    "final_selected_model": "XGBoost (chosen for highest ROC-AUC and recall)",
+    "best_hyperparameters": {
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "n_estimators": 100
+    },
+    "features_used": "All preprocessed numeric and categorical features from Telco dataset using ColumnTransformer",
+    "target_variable": "Churn (0 = No, 1 = Yes)",
+    "data_imbalance_handling": "SMOTE applied only on training data inside pipeline",
+    "pipeline_design": [
+        "ColumnTransformer for preprocessing",
+        "SMOTE for imbalance handling",
+        "ImbPipeline to avoid data leakage"
+    ],
+    "key_notes": [
+        "XGBoost outperformed Random Forest in ROC-AUC and recall",
+        "Higher recall is prioritized to reduce missed churn customers",
+        "Model tuned using GridSearchCV with 5-fold cross validation"
+    ],
+    "business_use_case": "Predict customer churn and support targeted retention strategies such as discounts and contract upgrades",
+    "limitations": "Model may still produce false positives and may not generalize well to unseen pricing structures or new customer behavior"
+}
